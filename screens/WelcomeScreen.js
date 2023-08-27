@@ -86,7 +86,7 @@ const WelcomeScreen = () => {
               fontWeight:'bold',
               color:"#078ECB"
             }}
-          >Sautez</Text>
+          >Sauter</Text>
         </TouchableOpacity>
       </View>
       <Carousel
@@ -97,6 +97,8 @@ const WelcomeScreen = () => {
         ref={_carousel}
         onSnapToItem={index => setactiveDotIndex(index)}
         autoplay
+        autoplayInterval={3000}
+        loop
       />
       <View style={{flexDirection:'row', justifyContent:'space-between'}}>
         <Pagination 
