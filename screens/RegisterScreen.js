@@ -135,7 +135,7 @@ const RegisterScreen = () => {
               alignItems:"center",
               marginVertical:10
             }}
-            onPress={() => navigation.navigate("Login")}
+            onPress={() => navigation.goBack("Login")}
           >
             <Text
               style={{
