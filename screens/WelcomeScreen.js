@@ -117,7 +117,7 @@ const WelcomeScreen = () => {
         />
 
         <View style={{padding:15, flexDirection:'row'}}>
-          <TouchableWithoutFeedback
+          <TouchableOpacity
             onPress={() =>{
               _carousel.current.snapToItem(activeDotIndex - 1)
             }}
@@ -145,8 +145,8 @@ const WelcomeScreen = () => {
                color="white"/>
             </View>
             
-          </TouchableWithoutFeedback>
-          <TouchableWithoutFeedback  onPress={() =>{
+          </TouchableOpacity>
+          <TouchableOpacity  onPress={() =>{
               _carousel.current.snapToItem(activeDotIndex + 1)
             }}>
             <View 
@@ -167,9 +167,7 @@ const WelcomeScreen = () => {
                 color="white"
               />
             </View>
-          </TouchableWithoutFeedback>
-
-
+          </TouchableOpacity>
         </View>
       </View>
     </SafeAreaView>
