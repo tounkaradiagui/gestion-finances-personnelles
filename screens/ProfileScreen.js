@@ -33,7 +33,8 @@ const ProfileScreen = () => {
               />
             </View>
             <View style={styles.FeatherIcon}>
-              <Feather name="edit" size={15} color="white" />
+              <FontAwesome name="camera" size={15} color="white" />
+              {/* <Feather name="edit" size={15} color="white" /> */}
             </View>
           </TouchableOpacity>
           <View
