@@ -8,11 +8,13 @@ import { useNavigation } from "@react-navigation/native";
 import { Entypo } from "@expo/vector-icons";
 import { FontAwesome } from "@expo/vector-icons";
 import { FontAwesome5 } from '@expo/vector-icons';
+import { StatusBar } from "expo-status-bar";
 
 const HomeScreen = () => {
   const navigation = useNavigation();
   return (
     <SafeAreaView>
+      <StatusBar backgroundColor="#078ECB" color="#fff"/>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View>
           <View style={styles.headerTop}>

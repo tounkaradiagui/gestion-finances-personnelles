@@ -1,6 +1,7 @@
 import React, {useState}from "react";
 import {
   Dimensions,
+  KeyboardAvoidingView,
   TextInput,
   SafeAreaView,
   StyleSheet,
@@ -40,7 +41,7 @@ const RegisterScreen = () => {
       <ScrollView
       showsVerticalScrollIndicator={false}
       >
-        <View style={{ 
+        <KeyboardAvoidingView style={{ 
             width: "100%", 
             marginTop:40
         }}>
@@ -272,7 +273,7 @@ const RegisterScreen = () => {
             
           </View>
           
-        </View>
+        </KeyboardAvoidingView>
         
       </ScrollView>
     </SafeAreaView>

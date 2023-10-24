@@ -5,6 +5,7 @@ import {
   StyleSheet,
   Text,
   View,
+  KeyboardAvoidingView,
   ScrollView,
   Image,
   TouchableOpacity,
@@ -25,7 +26,7 @@ const LoginScreen = () => {
     <SafeAreaView>
       <ScrollView showsVerticalScrollIndicator={false}>
         <Image
-          source={require("../assets/images/myOfficialLogo.png")}
+          source={require("../../assets/images/myOfficialLogo.png")}
           resizeMode="contain"
           style={{
             width: "100%",
@@ -33,7 +34,7 @@ const LoginScreen = () => {
             marginTop: 50,
           }}
         />
-        <View>
+        <KeyboardAvoidingView>
           <View style={{ alignItems: "flex-start", marginLeft: 25 }}>
             <Text style={{ fontSize: 30, fontWeight: "bold" }}>Welcome Back !</Text>
           </View>
@@ -83,7 +84,6 @@ const LoginScreen = () => {
                   borderColor: "#078ECB",
                   paddingVertical: 10,
                   borderRadius: 5,
-                  // padding: 20
                 }}
               >
                 <MaterialIcons
@@ -157,7 +157,7 @@ const LoginScreen = () => {
             </TouchableOpacity>
             
           </View>
-        </View>
+        </KeyboardAvoidingView>
       </ScrollView>
     </SafeAreaView>
   );

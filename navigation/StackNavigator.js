@@ -2,11 +2,7 @@ import React from 'react'
 import {StyleSheet, Text, View} from "react-native";
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import WelcomeScreen from "../screens/WelcomeScreen";
-import HomeScreen from "../screens/HomeScreen";
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import LoginScreen from '../auth/LoginScreen';
-import RegisterScreen from '../auth/RegisterScreen';
 import { AntDesign } from '@expo/vector-icons';
 import { Ionicons } from '@expo/vector-icons';
 import { Entypo } from '@expo/vector-icons';
@@ -16,8 +12,11 @@ import SettingsScreen from '../screens/SettingsScreen';
 import { FontAwesome } from '@expo/vector-icons';
 import SavingScreen from '../screens/SavingScreen';
 import ProfileScreen from '../screens/ProfileScreen';
-import ForgotPasswordScreen from '../auth/ForgotPasswordScreen';
-
+import ForgotPasswordScreen from '../components/auth/ForgotPasswordScreen';
+import WelcomeScreen from "../screens/WelcomeScreen";
+import LoginScreen from '../components/auth/LoginScreen';
+import RegisterScreen from '../components/auth/RegisterScreen';
+import HomeScreen from "../screens/HomeScreen";
 
 
 const StackNavigator = () => {
@@ -46,7 +45,7 @@ const StackNavigator = () => {
               component={TransactionScreen}
               options={{
                 tabBarLabelStyle:{color:"#078ECB"},
-                headerShown:true,
+                headerShown:false,
                 tabBarIcon: ({focused}) => focused ? (
                   <FontAwesome name="exchange" size={24} color="#078ECB" />
                 ) : (
@@ -59,7 +58,7 @@ const StackNavigator = () => {
               component={SavingScreen}
               options={{
                 tabBarLabelStyle:{color:"#078ECB"},
-                headerShown:true,
+                headerShown:false,
                 tabBarIcon: ({focused}) => focused ? (
                   <AntDesign name="pluscircleo" size={24} color="#078ECB" />
                 ) : (
@@ -72,7 +71,7 @@ const StackNavigator = () => {
               component={WalletScreen}
               options={{
                 tabBarLabelStyle:{color:"#078ECB"},
-                headerShown:true,
+                headerShown:false,
                 tabBarIcon: ({focused}) => focused ? (
                   <Ionicons name="wallet" size={24} color="#078ECB" />
                 ) : (
@@ -85,7 +84,7 @@ const StackNavigator = () => {
               component={ProfileScreen}
               options={{
                 tabBarLabelStyle:{color:"#078ECB"},
-                headerShown:true,
+                headerShown:false,
                 tabBarIcon: ({focused}) => focused ? (
                   <Ionicons name="person" size={24} color="#078ECB" />
                 ) : (
@@ -102,12 +101,13 @@ const StackNavigator = () => {
       <Stack.Navigator  initialRouteName="Welcome">
         <Stack.Screen name="Welcome" options={{headerShown:false}} component={WelcomeScreen} />
         <Stack.Screen name="Login" options={{headerShown:false}} component={LoginScreen} />
-        <Stack.Screen name="Inscription" options={{headerShown:true}} component={RegisterScreen} />
+        <Stack.Screen name="Inscription" options={{headerShown:false}} component={RegisterScreen} />
         <Stack.Screen name="Home" options={{headerShown:false}} component={HomeScreen} />
         <Stack.Screen name="Dashboard" options={{headerShown:false}} component={BottomTabs} />
-        <Stack.Screen name="Transactions" options={{headerShown:true}} component={TransactionScreen} />
-        <Stack.Screen name="Epargne" options={{headerShown:true}} component={SavingScreen} />
-        <Stack.Screen name="ForgotPassword" options={{headerShown:true}} component={ForgotPasswordScreen} />
+        <Stack.Screen name="Transactions" options={{headerShown:false}} component={TransactionScreen} />
+        <Stack.Screen name="Epargne" options={{headerShown:false}} component={SavingScreen} />
+        <Stack.Screen name="ForgotPassword" options={{headerShown:false}} component={ForgotPasswordScreen} />
+        <Stack.Screen name="Mon Profil" options={{headerShown:false}} component={ForgotPasswordScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   )

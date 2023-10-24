@@ -7,7 +7,8 @@ import {
   Dimensions,
   Image,
   Button,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  StatusBar
 } from "react-native";
 import Carousel, { Pagination } from "react-native-snap-carousel";
 import IMAGES from "../assets/index";
@@ -76,6 +77,7 @@ const WelcomeScreen = () => {
 
   return (
     <SafeAreaView style={styles.container}>
+      <StatusBar backgroundColor="#078ECB" color="#fff"/>
       <View style={{alignItems: "flex-end", marginTop:40, marginEnd:10}}>
         <TouchableOpacity
           onPress={()=>{navigation.navigate('Login')}}
